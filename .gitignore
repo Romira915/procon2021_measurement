@@ -1,0 +1,7 @@
+/target
+
+*.out
+*.exe
+/in
+/out
+/exe
