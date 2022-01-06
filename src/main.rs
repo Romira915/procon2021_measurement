@@ -40,7 +40,7 @@ impl Display for KyouproResult {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
             f,
-            "{}\tAC×{}\tWA×{}\t{}us",
+            "{:<13}\tAC×{}\tWA×{}\t{:>7}us",
             self.entry_name, self.ac, self.wa, self.average_us
         )
     }
@@ -108,7 +108,7 @@ fn search_file_with_extension(
 
 fn main() -> std::io::Result<()> {
     let txt_extension = "txt";
-    let exe_extension = "out";
+    let exe_extension = "exe";
     let try_times = 1;
 
     let mut io_files = search_file_with_extension(Path::new("./in"), txt_extension)
